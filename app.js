@@ -35,14 +35,14 @@ const data = [
 //to get elements
 const shoppingDiv = document.querySelector(".container");
 
-
-
 const showDataOnBrowser = data.map(item => {
+ 
     return `
      <div>
         <img src="${item.url}" alt="cart-image">
         <h4>${item.title}</h4>
         <p>${item.author}</p>
+        <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}')">Add to cart</button>
      </div>
     `;
 });
@@ -50,3 +50,13 @@ const showDataOnBrowser = data.map(item => {
 
 shoppingDiv.innerHTML = showDataOnBrowser.join("");
  
+
+function addToCart(title, author, year, url) {
+    const data = {
+        title,
+        author,
+        year,
+        url
+    }
+    console.log("data: ",data);
+}
