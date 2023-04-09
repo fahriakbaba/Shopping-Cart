@@ -86,21 +86,22 @@ displayMainCart();
 
 // to write eventlistener function
 homeIcon.addEventListener("click", () => {
-    location.reload();
+    location.href = "https://github.com/fahriakbaba/Shopping-Cart";
     console.log("index.html is reloaded!");
 });
 
+//to open modal
 shoppingIcon.addEventListener("click", () => {
     modal.style.display = "block";
     showCart();
 });
 
+//to close modal
 function closeModal() {
     modal.style.display = "none";
 }
 
-
-
+//display booklist on browser
 function displayMainCart() {
     const showDataOnBrowser = data.map(item => {
         return `
@@ -113,9 +114,9 @@ function displayMainCart() {
         `;
     });
     mainSection.innerHTML = showDataOnBrowser.join("");
-     
 }
 
+//to add a book to cartArr
 function addToCart(title, author, year, url, amount) {
     const data = {
         title,
@@ -135,6 +136,7 @@ function addToCart(title, author, year, url, amount) {
     showCart();
 }
 
+//to show book from cartArr 
 function showCart() {
     const mapArr = cartArr.map(item => {
         return (`

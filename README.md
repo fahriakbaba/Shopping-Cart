@@ -8,7 +8,7 @@
 <li>Vanilla JS
     <ol>
     <li>.map() method</li>
-    <li>.filter() method</li>
+    <li>.findIndex() method</li>
     <li>.reduce() method</li>
     </ol>
 </li>
