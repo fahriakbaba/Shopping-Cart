@@ -1,3 +1,4 @@
+@import "./partials/variables";
 @import "./partials/navbar";
 @import "./partials/main.scss";
 
@@ -7,11 +8,43 @@
 
 .modal {
     display: none;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, .7);
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .7;
     width: 100vw;
     height: 100vh;
+
+    .modal-main-content {
+        border-radius: 5px;
+        padding: 1% 2%;
+        width: 40%;
+        height: auto;
+        margin: 12rem auto;
+        background-color: white;
+
+        p {
+            font-weight: map-get($fontWeights, "bold");
+            color: gray;
+            text-align: right;
+            @include flexAlign(flex-end, center, row);
+            gap: .5rem;
+
+            i {
+                font-size: 1.25rem;
+                color: map-get($colors, "closeColor");
+                cursor: pointer;
+                opacity: .6;
+            }
+        }
+
+        .modal-cart {
+            @include flexAlign (space-between, center , row);
+            margin: 1.5rem auto;
+
+            .cart-info {
+                @include flexAlign(flex-start, center, row);
+            }
+        }
+    }
 }

@@ -67,32 +67,43 @@ const mainSection = document.querySelector(".index-main");
 const homeIcon = document.querySelector(".fa-house");
 const shoppingIcon = document.querySelector(".fa-cart-plus");
 const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".modal-main-content");
 const cartArr = [];
 
 
-//traversing among pages
+displayMainCart();
+
+// to write eventlistener function
 homeIcon.addEventListener("click", () => {
-    modal.style.display = "none";
+    location.reload();
+    console.log("index.html is reloaded!");
 });
+
 shoppingIcon.addEventListener("click", () => {
     modal.style.display = "block";
-})
-
-const showDataOnBrowser = data.map(item => {
- 
-    return `
-     <div class="cart">
-        <img src="${item.url}" alt="cart-image" width="40px">
-        <h4>${item.title}</h4>
-        <p>${item.author}</p>
-        <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}')">Add to cart</button>
-     </div>
-    `;
+    showCart();
 });
 
+function closeModal() {
+    modal.style.display = "none";
+}
 
-mainSection.innerHTML = showDataOnBrowser.join("");
- 
+
+
+function displayMainCart() {
+    const showDataOnBrowser = data.map(item => {
+        return `
+         <div class="cart">
+            <img src="${item.url}" alt="cart-image" width="40px">
+            <h4>${item.title}</h4>
+            <p>${item.author}</p>
+            <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}')">Add to cart</button>
+         </div>
+        `;
+    });
+    mainSection.innerHTML = showDataOnBrowser.join("");
+     
+}
 
 function addToCart(title, author, year, url) {
     const data = {
@@ -103,18 +114,26 @@ function addToCart(title, author, year, url) {
     }
 
     cartArr.push(data);
-    alert(data.title);
     showCart();
 }
 
 function showCart() {
     const mapArr = cartArr.map(item => {
         return (`
-        <p>${item.title}</p>
+        <div class="modal-cart">
+            <div class="cart-info">
+                <img src="${item.url}" alt="cart_image" class="cart-image" width="35" />
+                <h5 class="title">${item.title}</h5>
+            </div>
+            <div class="button">
+                <span class="numberOfCar">2</span>
+                <i class="fa-solid fa-trash"></i>
+            </div>
+        </div>
         `)
     });
 
-    console.log(mapArr);
-    console.log();
-    modal.innerHTML = mapArr.join("");
+    mapArr.unshift(`<p>Close<i id="close-icon" class="fa-regular fa-circle-xmark" onclick="closeModal()"></i></p>`);
+    
+    modalContent.innerHTML = mapArr.join("");
 }
