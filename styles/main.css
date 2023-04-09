@@ -60,12 +60,8 @@ body {
 }
 .header nav ul li i {
   color: orange;
-  transition: font-size 0.7s;
+  transition: opacity 0.5s;
 }
 .header nav ul li i:hover {
-  font-size: 1.1111111111rem;
-}
-
-body {
-  min-height: 1000vh;
+  opacity: 0.75;
 }/*# sourceMappingURL=main.css.map */

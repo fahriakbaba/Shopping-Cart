@@ -37,10 +37,10 @@
 
                 i {
                     color: map-get($colors, "warning");
-                    transition: font-size .7s;
+                    transition: opacity .5s;
 
                     &:hover {
-                        font-size: calc((map-get($fontSizes, "large") * 5) / 9);
+                        opacity: .75;
                     }
                 }
             }

@@ -33,7 +33,13 @@ const data = [
 ];
 
 //to get elements
-const shoppingDiv = document.querySelector(".container");
+const mainSection = document.querySelector(".index-main");
+const homeIcon = document.querySelector(".fa-house");
+const shoppingIcon = document.querySelector(".fa-cart-plus");
+
+//traversing among pages
+homeIcon.addEventListener("click", () => location.href = "index.html");
+shoppingIcon.addEventListener("click", () => location.href = "cart.html")
 
 const showDataOnBrowser = data.map(item => {
  
@@ -48,7 +54,7 @@ const showDataOnBrowser = data.map(item => {
 });
 
 
-shoppingDiv.innerHTML = showDataOnBrowser.join("");
+mainSection.innerHTML = showDataOnBrowser.join("");
  
 
 function addToCart(title, author, year, url) {
