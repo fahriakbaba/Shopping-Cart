@@ -1,6 +1,35 @@
+/*to import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 /* reset in CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;;
+}
+
+/*font size*/
+$fontSizes: (
+    "small": .75rem,
+    "normal": 1rem,
+    "large": 2rem,
+);
+
+/*colors*/
+$colors: (
+    "warning": orange,
+    "dark": black,
+    "light": white,
+    "lightShadow": gainsboro,
+);
+
+@mixin flexAlign($horizantal, $vertical, $direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $horizantal;
+    align-items: $vertical;
 }

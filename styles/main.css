@@ -1,6 +1,38 @@
+/*to import google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 /* reset in CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*font size*/
+/*colors*/
+/*mobile*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 3%;
+  box-shadow: 0.5px 0.5px 5px gainsboro;
+}
+.header h1 {
+  font-size: 1.6rem;
+}
+.header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style-type: none;
+}
+.header nav ul li {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

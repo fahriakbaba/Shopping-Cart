@@ -1,0 +1,25 @@
+@import "./variables";
+@import "./mediaQueries";
+
+.header {
+    @include flexAlign(space-between, center, row);
+    padding: 1% 3%;
+    box-shadow: .5px .5px 5px map-get($colors, "lightShadow");
+
+    h1 {
+        font-size: calc( (map-get($fontSizes, "large") * 4) / 5);
+    }
+
+    nav {
+        
+        ul {
+            @include flexAlign(space-between, center, row);
+            gap: 1rem;
+            list-style-type: none;
+
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+}
