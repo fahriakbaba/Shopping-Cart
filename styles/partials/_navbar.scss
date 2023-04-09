@@ -30,6 +30,7 @@
             list-style-type: none;
 
             li {
+                position: relative;
                 cursor: pointer;
                 @include mobile {
                     font-size: map-get($fontSizes, "small");
@@ -42,6 +43,15 @@
                     &:hover {
                         opacity: .75;
                     }
+                }
+
+                .shopping-number {
+                    position: absolute;
+                    top: -5px;
+                    right: -15px;
+                    font-weight: map-get($fontWeights, "bold");
+                    font-size: map-get($fontSizes, "small");
+                    color: map-get($colors, "warning");
                 }
             }
         }

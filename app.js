@@ -78,6 +78,7 @@ const homeIcon = document.querySelector(".fa-house");
 const shoppingIcon = document.querySelector(".fa-cart-plus");
 const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-main-content");
+const shoppingCartNumber = document.querySelector(".shopping-number");
 const cartArr = [];
 
 
@@ -151,8 +152,18 @@ function showCart() {
     });
 
     mapArr.unshift(`<p>Close<i id="close-icon" class="fa-regular fa-circle-xmark" onclick="closeModal()"></i></p>`);
+
+    if(!cartArr.length) {
+        modalContent.innerHTML = `
+        <p>Close<i id="close-icon" class="fa-regular fa-circle-xmark" onclick="closeModal()"></i></p>
+        <p class="message" >No book in the booklist to  show!</p>
+        `;
+        shoppingCartAmount();
+        return;
+    }
     
     modalContent.innerHTML = mapArr.join("");
+    shoppingCartAmount();
 }
 
 //to delete book from booklist in cartArr
@@ -160,4 +171,12 @@ function deleteItemFromCart(title) {
     const findIndexBook = cartArr.findIndex(bookName => bookName.title === title);
     cartArr.splice(findIndexBook, 1);
     showCart();
+}
+
+//to show cart number on cart shoping icon
+function shoppingCartAmount() {
+    const amountCart = cartArr.reduce((acc, crr) => {
+        return acc + Number(crr.amount);
+    }, 0);
+    shoppingCartNumber.textContent = amountCart;
 }
