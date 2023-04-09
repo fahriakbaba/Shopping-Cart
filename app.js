@@ -144,7 +144,7 @@ function showCart() {
             </div>
             <div class="button">
                 <span class="numberOfCar">${item.amount}</span>
-                <i class="fa-solid fa-trash"></i>
+                <i class="fa-solid fa-trash" onclick="deleteItemFromCart('${item.title}')"></i>
             </div>
         </div>
         `)
@@ -153,4 +153,11 @@ function showCart() {
     mapArr.unshift(`<p>Close<i id="close-icon" class="fa-regular fa-circle-xmark" onclick="closeModal()"></i></p>`);
     
     modalContent.innerHTML = mapArr.join("");
+}
+
+//to delete book from booklist in cartArr
+function deleteItemFromCart(title) {
+    const findIndexBook = cartArr.findIndex(bookName => bookName.title === title);
+    cartArr.splice(findIndexBook, 1);
+    showCart();
 }

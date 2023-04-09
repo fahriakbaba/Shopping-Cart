@@ -4,6 +4,10 @@
 
 .container {
     padding: 2% 5%;
+    @include mobile {
+        padding-right: 2% 10%;
+        width: 100%;
+    }
 }
 
 .modal {

@@ -176,6 +176,12 @@ body {
 .container {
   padding: 2% 5%;
 }
+@media (max-width: 480px) {
+  .container {
+    padding-right: 2% 10%;
+    width: 100%;
+  }
+}
 
 .modal {
   display: none;
