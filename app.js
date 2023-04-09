@@ -4,61 +4,71 @@ const data = [
         title: "Diriliş",
         author: "Tolstoy",
         year: 1899,
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XeEtDf8086y3W9rAD9oxlBM_aI1v6j2iIw&usqp=CAU"
+        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XeEtDf8086y3W9rAD9oxlBM_aI1v6j2iIw&usqp=CAU",
+        amount: 1
     },
     {
         title: "Sefiller",
         author: "Victor Hugo",
         year: 1862,
-        url:"https://cdn.akakce.com/-/sefiller-victor-hugo-z.jpg"
+        url:"https://cdn.akakce.com/-/sefiller-victor-hugo-z.jpg",
+        amount: 1
     },
     {
         title: "Bir İdam Mahkumunun Son Günü",
         author: "Victor Hugo",
         year: 1829,
-        url:"https://productimages.hepsiburada.net/s/36/500/10531608920114.jpg"
+        url:"https://productimages.hepsiburada.net/s/36/500/10531608920114.jpg",
+        amount: 1
     },
     {
         title: "Ana",
         author: "Maksim Gorki",
         year: 1906,
-        url:"https://img.kitapyurdu.com/v1/getImage/fn:11432909/wh:true/miw:200/mih:200"
+        url:"https://img.kitapyurdu.com/v1/getImage/fn:11432909/wh:true/miw:200/mih:200",
+        amount: 1
     },
     {
         title: "Markopaşa Yazıları ve Ötekiler",
         author: "Sbahatti Ali",
         year: 1998,
-        url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg"
+        url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg",
+        amount: 1
     },
     {
         title: "Diriliş",
         author: "Tolstoy",
         year: 1899,
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XeEtDf8086y3W9rAD9oxlBM_aI1v6j2iIw&usqp=CAU"
+        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XeEtDf8086y3W9rAD9oxlBM_aI1v6j2iIw&usqp=CAU",
+        amount: 1
     },
     {
         title: "Sefiller",
         author: "Victor Hugo",
         year: 1862,
-        url:"https://cdn.akakce.com/-/sefiller-victor-hugo-z.jpg"
+        url:"https://cdn.akakce.com/-/sefiller-victor-hugo-z.jpg",
+        amount: 1
     },
     {
         title: "Bir İdam Mahkumunun Son Günü",
         author: "Victor Hugo",
         year: 1829,
-        url:"https://productimages.hepsiburada.net/s/36/500/10531608920114.jpg"
+        url:"https://productimages.hepsiburada.net/s/36/500/10531608920114.jpg",
+        amount: 1
     },
     {
         title: "Ana",
         author: "Maksim Gorki",
         year: 1906,
-        url:"https://img.kitapyurdu.com/v1/getImage/fn:11432909/wh:true/miw:200/mih:200"
+        url:"https://img.kitapyurdu.com/v1/getImage/fn:11432909/wh:true/miw:200/mih:200",
+        amount: 1
     },
     {
         title: "Markopaşa Yazıları ve Ötekiler",
         author: "Sbahatti Ali",
         year: 1998,
-        url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg"
+        url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg",
+        amount: 1
     }
 ];
 
@@ -97,7 +107,7 @@ function displayMainCart() {
             <img src="${item.url}" alt="cart-image" width="40px">
             <h4>${item.title}</h4>
             <p>${item.author}</p>
-            <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}')">Add to cart</button>
+            <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}', '${item.amount}')">Add to cart</button>
          </div>
         `;
     });
@@ -105,14 +115,21 @@ function displayMainCart() {
      
 }
 
-function addToCart(title, author, year, url) {
+function addToCart(title, author, year, url, amount) {
     const data = {
         title,
         author,
         year,
-        url
-    }
+        url,
+        amount
+    };
 
+    const findItem = cartArr.find(item => item.title === data.title);
+    if(findItem) {
+        findItem.amount++;
+        showCart();
+        return
+    }
     cartArr.push(data);
     showCart();
 }
@@ -126,7 +143,7 @@ function showCart() {
                 <h5 class="title">${item.title}</h5>
             </div>
             <div class="button">
-                <span class="numberOfCar">2</span>
+                <span class="numberOfCar">${item.amount}</span>
                 <i class="fa-solid fa-trash"></i>
             </div>
         </div>
