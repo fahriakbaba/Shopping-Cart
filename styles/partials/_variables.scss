@@ -19,6 +19,13 @@ $fontSizes: (
     "large": 2rem,
 );
 
+/*fonr weights*/
+$fontWeights: (
+    "light": lighter,
+    "normal": normal,
+    "bold": bold,
+);
+
 /*colors*/
 $colors: (
     "warning": orange,

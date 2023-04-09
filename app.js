@@ -39,7 +39,7 @@ const showDataOnBrowser = data.map(item => {
  
     return `
      <div>
-        <img src="${item.url}" alt="cart-image">
+        <img src="${item.url}" alt="cart-image" width="40px">
         <h4>${item.title}</h4>
         <p>${item.author}</p>
         <button type="button" onclick="addToCart('${item.title}', '${item.author}', '${item.year}', '${item.url}')">Add to cart</button>
