@@ -9,9 +9,10 @@
     .cart {
         text-align: center;
         box-shadow: .5px .5px 5px map-get($colors, "lightShadow");
-        padding: .7rem 1.2rem;
+        padding: 1.5rem;
         border-radius: 5px;
         width: 250px;
+        height: 250px;
         transition: box-shadow .5s;
 
         &:hover {
@@ -20,6 +21,7 @@
 
         img {
             width: 100px;
+            height: 100px;
             border-radius: 5px;
         }
 

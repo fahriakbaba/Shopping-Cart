@@ -52,6 +52,9 @@
             opacity: .75;
             color: red;
             margin-top: 1rem;
+            @include mobile {
+                font-size: map-get($fontSizes, "small");
+            }
         }
 
         .modal-cart {
@@ -60,11 +63,27 @@
 
             .cart-info {
                 @include flexAlign(flex-start, center, row);
-                gap: .5rem
+                gap: .5rem;
+
+                .cart-image {
+                    width: 20px;
+                    border-radius: 4px
+                }
+
+                .title {
+                    @include mobile {
+                        font-size: map-get($fontSizes, "small");
+                    }
+                }
             }
 
             .button {
                 @include flexAlign (space-between, center , row);
+                @include mobile {
+                    font-size: map-get($fontSizes, "small");
+                    justify-content: flex-end;
+                    margin-right: 5px;
+                }
                 span {
                     font-weight: map-get($fontWeights, "bold");
                     margin-right: .5rem;

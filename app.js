@@ -30,44 +30,44 @@ const data = [
     },
     {
         title: "Markopaşa Yazıları ve Ötekiler",
-        author: "Sbahatti Ali",
+        author: "Sabahatti Ali",
         year: 1998,
         url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg",
         amount: 1
     },
     {
-        title: "Diriliş",
+        title: "Anna Karenina",
         author: "Tolstoy",
-        year: 1899,
-        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9XeEtDf8086y3W9rAD9oxlBM_aI1v6j2iIw&usqp=CAU",
+        year: 1877,
+        url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR163Tt4Bs7xkjt9PXxnBFnnuAaeGS0wIA1kuuSrZuDrpUxCYpmZyRXq3Jm6ogV3i7XkH4&usqp=CAU",
         amount: 1
     },
     {
-        title: "Sefiller",
-        author: "Victor Hugo",
-        year: 1862,
-        url:"https://cdn.akakce.com/-/sefiller-victor-hugo-z.jpg",
+        title: "İnsan Ne İle Yaşar",
+        author: "Tolstoy",
+        year: 1885,
+        url:"https://i.dr.com.tr/cache/500x400-0/originals/0000000231443-1.jpg",
         amount: 1
     },
     {
-        title: "Bir İdam Mahkumunun Son Günü",
-        author: "Victor Hugo",
-        year: 1829,
-        url:"https://productimages.hepsiburada.net/s/36/500/10531608920114.jpg",
+        title: "İçimizdeki Şeytan",
+        author: "Sabahattin Ali",
+        year: 1940,
+        url:"https://www.alternatifkitap.com/images/detailed/11/9789753638036.jpg",
         amount: 1
     },
     {
-        title: "Ana",
-        author: "Maksim Gorki",
-        year: 1906,
-        url:"https://img.kitapyurdu.com/v1/getImage/fn:11432909/wh:true/miw:200/mih:200",
+        title: "Beyaz Geceler",
+        author: "Fyodor Mihailoviç Dostoyevski",
+        year: 1848,
+        url:"https://img.kitapyurdu.com/v1/getImage/fn:6609755/wh:true/wi:220",
         amount: 1
     },
     {
-        title: "Markopaşa Yazıları ve Ötekiler",
-        author: "Sbahatti Ali",
-        year: 1998,
-        url:"https://www.yapikrediyayinlari.com.tr/dosyalar/2020/06/Markopasa_yazilari-2230.jpg",
+        title: "Hayvan Çiftliği",
+        author: "George Orwell",
+        year: 1945,
+        url:"https://www.alfakitap.com/media/catalog/product/cache/7aaa48ea9734ca445e6a222a3fe7d59a/2/2/224479_9786053046363_19275.jpg",
         amount: 1
     }
 ];
