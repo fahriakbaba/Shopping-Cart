@@ -18,6 +18,9 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    @include mobile {
+        height: 300vh;
+    }
 
     .modal-main-content {
         border-radius: 5px;
