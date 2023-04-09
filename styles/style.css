@@ -1,6 +1,7 @@
 /*to import google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 /* reset in CSS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,21 @@ body {
 /*font size*/
 /*fonr weights*/
 /*colors*/
+.index-main .cart button {
+  margin-top: 10px;
+  padding: 4px 7px;
+  cursor: pointer;
+  color: orange;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 3px;
+  transition: background-color 0.5s, color 0.5s;
+}
+.index-main .cart button:hover {
+  color: white;
+  background-color: orange;
+}
+
 /*mobile*/
 .header {
   background-color: white;
@@ -64,4 +80,68 @@ body {
 }
 .header nav ul li i:hover {
   opacity: 0.75;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*to import google fonts*/
+/* reset in CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*font size*/
+/*fonr weights*/
+/*colors*/
+.index-main .cart button {
+  margin-top: 10px;
+  padding: 4px 7px;
+  cursor: pointer;
+  color: orange;
+  background-color: white;
+  border: 1px solid orange;
+  border-radius: 3px;
+  transition: background-color 0.5s, color 0.5s;
+}
+.index-main .cart button:hover {
+  color: white;
+  background-color: orange;
+}
+
+/*mobile*/
+.index-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.index-main .cart {
+  text-align: center;
+  box-shadow: 0.5px 0.5px 5px gainsboro;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  width: 250px;
+  transition: box-shadow 0.5s;
+}
+.index-main .cart:hover {
+  box-shadow: 1px 1px 8px gainsboro;
+}
+.index-main .cart img {
+  width: 100px;
+  border-radius: 5px;
+}
+.index-main .cart h4 {
+  font-size: 1rem;
+}
+.index-main .cart p {
+  font-size: 0.75rem;
+}
+.container {
+  padding: 2% 5%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,42 +1,60 @@
 /*to import google fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 /* reset in CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;;
+  font-family: "Poppins", sans-serif;
 }
 
 /*font size*/
 $fontSizes: (
-    "small": .75rem,
-    "normal": 1rem,
-    "large": 2rem,
+  "small": 0.75rem,
+  "normal": 1rem,
+  "large": 2rem,
 );
 
 /*fonr weights*/
 $fontWeights: (
-    "light": lighter,
-    "normal": normal,
-    "bold": bold,
+  "light": lighter,
+  "normal": normal,
+  "bold": bold,
 );
 
 /*colors*/
 $colors: (
-    "warning": orange,
-    "dark": black,
-    "light": white,
-    "lightShadow": gainsboro,
+  "warning": orange,
+  "dark": black,
+  "light": white,
+  "lightShadow": gainsboro,
 );
 
+//to arrange flex align
 @mixin flexAlign($horizantal, $vertical, $direction) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $horizantal;
-    align-items: $vertical;
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizantal;
+  align-items: $vertical;
+}
+
+//to make a custom button
+%btn {
+  margin-top: 10px;
+  padding: 4px 7px;
+  cursor: pointer;
+  color: map-get($colors, "warning");
+  background-color: map-get($colors, "light");
+  border: 1px solid map-get($colors, "warning");
+  border-radius: 3px;
+  transition: background-color .5s, color .5s;
+
+  &:hover {
+    color: map-get($colors, "light");
+    background-color: map-get($colors, "warning");
+  }
 }

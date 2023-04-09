@@ -1,0 +1,38 @@
+@import "./variables";
+@import "./mediaQueries";
+
+.index-main {
+    @include flexAlign(center, center, row);
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .cart {
+        text-align: center;
+        box-shadow: .5px .5px 5px map-get($colors, "lightShadow");
+        padding: .7rem 1.2rem;
+        border-radius: 5px;
+        width: 250px;
+        transition: box-shadow .5s;
+
+        &:hover {
+            box-shadow: 1px 1px 8px map-get($colors, "lightShadow");
+        }
+
+        img {
+            width: 100px;
+            border-radius: 5px;
+        }
+
+        h4 {
+            font-size: map-get($fontSizes, "normal");
+        }
+
+        p {
+            font-size: map-get($fontSizes, "small");
+        }
+
+        button {
+            @extend %btn;
+        }
+    }
+}
