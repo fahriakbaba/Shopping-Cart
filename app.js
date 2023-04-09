@@ -66,10 +66,19 @@ const data = [
 const mainSection = document.querySelector(".index-main");
 const homeIcon = document.querySelector(".fa-house");
 const shoppingIcon = document.querySelector(".fa-cart-plus");
+const modal = document.querySelector(".modal");
+const cartArr = [];
+
 
 //traversing among pages
-homeIcon.addEventListener("click", () => location.href = "index.html");
-shoppingIcon.addEventListener("click", () => location.href = "cart.html")
+homeIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    location.href = "index.html";
+});
+shoppingIcon.addEventListener("click", (e) => {
+    e.preventDefault();
+    location.href = "cart.html";
+})
 
 const showDataOnBrowser = data.map(item => {
  
@@ -94,5 +103,20 @@ function addToCart(title, author, year, url) {
         year,
         url
     }
-    console.log("data: ",data);
+
+    cartArr.push(data);
+    alert(data.title);
+    showCart();
+}
+
+function showCart() {
+    const mapArr = cartArr.map(item => {
+        return (`
+        <p>${item.title}</p>
+        `)
+    });
+
+    console.log(mapArr);
+    console.log();
+    modal.innerHTML = mapArr.join("");
 }
