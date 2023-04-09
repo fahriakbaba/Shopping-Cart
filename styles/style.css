@@ -246,11 +246,7 @@ body {
   opacity: 0.75;
   color: red;
   margin-top: 1rem;
-}
-@media (max-width: 480px) {
-  .modal .modal-main-content .message {
-    font-size: 0.75rem;
-  }
+  font-size: 0.75rem;
 }
 .modal .modal-main-content .modal-cart {
   display: flex;
@@ -270,23 +266,17 @@ body {
   width: 20px;
   border-radius: 4px;
 }
-@media (max-width: 480px) {
-  .modal .modal-main-content .modal-cart .cart-info .title {
-    font-size: 0.75rem;
-  }
+.modal .modal-main-content .modal-cart .cart-info .title {
+  font-size: 0.75rem;
 }
 .modal .modal-main-content .modal-cart .button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-@media (max-width: 480px) {
-  .modal .modal-main-content .modal-cart .button {
-    font-size: 0.75rem;
-    justify-content: flex-end;
-    margin-right: 5px;
-  }
+  font-size: 0.75rem;
+  justify-content: flex-end;
+  margin-right: 5px;
 }
 .modal .modal-main-content .modal-cart .button span {
   font-weight: bold;
