@@ -71,13 +71,11 @@ const cartArr = [];
 
 
 //traversing among pages
-homeIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    location.href = "index.html";
+homeIcon.addEventListener("click", () => {
+    modal.style.display = "none";
 });
-shoppingIcon.addEventListener("click", (e) => {
-    e.preventDefault();
-    location.href = "cart.html";
+shoppingIcon.addEventListener("click", () => {
+    modal.style.display = "block";
 })
 
 const showDataOnBrowser = data.map(item => {

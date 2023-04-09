@@ -144,4 +144,15 @@ body {
 }
 .container {
   padding: 2% 5%;
+}
+
+.modal {
+  display: none;
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
